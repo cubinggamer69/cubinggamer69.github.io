@@ -99,7 +99,7 @@ body {
 }
 .top .new {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 1em;
   font-size: 15px;
   font-weight: 600;
