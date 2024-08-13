@@ -1,0 +1,159 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap";
+* {
+  color-scheme: dark;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Roboto Mono";
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 min(500px, 10vw);
+  width: 100vw;
+  height: 100vh;
+  background-color: #0f0f0f;
+}
+
+.typingArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: min(600px, 100%);
+}
+.typingArea .inputRow {
+  display: flex;
+  height: 60px;
+  -moz-column-gap: 0.3em;
+       column-gap: 0.3em;
+  width: 100%;
+}
+.typingArea .inputRow .inputBox {
+  font-size: 1.1em;
+  margin-top: 20px;
+  padding: 20px 5px;
+  flex: 1;
+}
+.typingArea .inputRow button#newtest {
+  flex: 0 0 auto;
+}
+
+.result {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.4em;
+}
+
+.words {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: min(600px, 100%);
+  gap: 0 0.7ch;
+  font-size: 0.8em;
+}
+.words > .word {
+  padding: 4px;
+  margin: 3px 0;
+  border-radius: 5px;
+  transition: all ease 0.23s;
+  color: white;
+}
+.words > .word.active {
+  background-color: rgba(49, 51, 55, 0.9019607843);
+  translate: 0px -1.5px;
+}
+.words > .word.error {
+  color: rgba(249, 80, 80, 0.993);
+}
+.words > .word.currentlyError {
+  background-color: rgba(249, 80, 80, 0.993);
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.top .stats {
+  font-size: 15px;
+  margin: 30px 0;
+  display: flex;
+  gap: 1em;
+}
+.top .stats .stat {
+  padding: 5px;
+  color: white;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(8, 183, 252, 0.9019607843);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+.top .new {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-size: 15px;
+  font-weight: 600;
+}
+.top .new .wordCount {
+  cursor: pointer;
+  padding-bottom: 5px;
+  color: white;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(8, 183, 252, 0.9019607843);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+#playaudio {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  translate: 0px 2px;
+  display: flex;
+  align-items: flex-start;
+  width: 30px;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgba(8, 183, 252, 0.9019607843);
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-family: "Roboto Mono";
+  margin-top: 20px;
+  padding: 6px;
+  border-radius: 5px;
+  color: black;
+  font-weight: 700;
+}
+
+input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  caret-shape: block;
+  font-family: "Roboto Mono";
+  background-color: rgba(49, 51, 55, 0.9019607843);
+  box-shadow: 3px 2px 10px rgba(52, 53, 55, 0.358);
+}
+input::-moz-placeholder {
+  font-size: 0.9em;
+}
+input::placeholder {
+  font-size: 0.8em;
+}/*# sourceMappingURL=style.css.map */
